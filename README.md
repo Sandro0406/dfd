@@ -1,37 +1,22 @@
 # Capítulo II: Requirements Elicitation & Analysis
 
-El presente capítulo documenta el proceso de elicitación y análisis de requisitos de MachineGuard, la plataforma SaaS + IoT de monitoreo ambiental para PyMEs de manufactura y almacenaje de Lima descrita en el Capítulo I. El trabajo parte de dos frentes complementarios: por un lado, un análisis de la competencia que permite contrastar las suposiciones iniciales del equipo con la oferta realmente disponible en el mercado peruano; por el otro, un proceso de Needfinding sustentado en entrevistas a representantes de los segmentos objetivo, registradas en video.
-
-Los hallazgos de ambos frentes convergen en la construcción de los artefactos de investigación de usuario —User Personas, User Task Matrix, User Journey Maps (As-Is) y Empathy Maps—, en la exploración del dominio de negocio mediante Big Picture EventStorming y, finalmente, en la formalización de un Ubiquitous Language que elimina la ambigüedad terminológica entre los miembros del equipo y los stakeholders. Estos artefactos constituyen la entrada directa para la especificación de requisitos del Capítulo III.
-
-**Segmentos objetivo considerados en todo el capítulo.** De acuerdo con lo establecido en la sección 1.3, y en línea con los dos segmentos que el equipo definió al delimitar el alcance del proyecto precisamente para someterlos a validación en este proceso de Needfinding, MachineGuard se dirige a: **(1) Jefes de Almacén y Gerentes de Operaciones** —categoría que comprende también a los supervisores de almacén— de PyMEs de manufactura y almacenaje, responsables de custodiar insumos y productos sensibles a la humedad y la temperatura, y que necesitan enterarse con rapidez cuando una condición sale de rango; y **(2) Encargados de Control de Calidad** de esas mismas empresas, responsables de evidenciar la trazabilidad de las condiciones ambientales ante auditorías internas y externas y ante procesos de certificación.
-
----
-
 ## 2.1. Competidores
 
-MachineGuard compite en el mercado de plataformas de monitoreo ambiental remoto (temperatura y humedad relativa) basadas en dispositivos IoT conectados a un servicio en la nube. Se identificaron tres competidores directos cuyo modelo de negocio se sustenta en productos digitales equivalentes —hardware sensor más plataforma web y aplicación móvil bajo suscripción— y que resultan accesibles para una PyME peruana, ya sea por venta directa en línea o a través de distribuidores locales.
+Se identificaron tres competidores directos cuyo modelo de negocio se sustenta en productos digitales equivalentes además de resultar accesibles, ya sea por venta directa en línea o a través de distribuidores locales.
 
-**UbiBot.** Marca de UbiBot Ltd. especializada en sensores inalámbricos autónomos de temperatura, humedad, luz y vibración (líneas WS1, WS1 Pro y GS1) con conectividad WiFi, 4G, LoRa o Ethernet. Los dispositivos se vinculan a la plataforma en la nube UbiBot IoT Platform, que ofrece dashboard web, aplicación móvil iOS/Android, alertas por correo, app y canales tipo IFTTT, exportación de datos y generación de reportes en PDF. Su modelo comercial es de compra única del hardware con un plan gratuito de plataforma (con cuotas de almacenamiento y tráfico) y planes de pago para mayor volumen, más usuarios y retención extendida del histórico. Es el competidor más cercano a MachineGuard en la variable precio.
+**UbiBot.** Marca de UbiBot Ltd. especializada en sensores inalámbricos autónomos de temperatura, humedad, luz y vibración con conectividad WiFi, 4G. Los dispositivos se vinculan a la plataforma en la nube UbiBot IoT Platform, que ofrece dashboard web, aplicación móvil iOS/Android, alertas por correo, app y generación de reportes en PDF.
 
-**Monnit (iMonnit).** Fabricante estadounidense de la línea ALTA de sensores inalámbricos de largo alcance (banda sub-GHz) que se comunican con un gateway propietario y de allí con la plataforma en la nube iMonnit. Ofrece sensores de temperatura y humedad con certificado de calibración NIST, reglas de alerta configurables, notificaciones por SMS/correo/llamada y una API para integración. Su modelo combina venta de hardware (sensores + gateway) con suscripción a iMonnit por niveles de servicio. Representa la alternativa de gama profesional accesible sin llegar al costo de un SCADA.
+**Monnit (iMonnit).** Fabricante estadounidense que ofrece sensores de temperatura y humedad con certificado de calibración, notificaciones por SMS/correo/llamada y una API para integración. Representa la alternativa de gama profesional accesible.
 
-**Testo Saveris (Testo AG).** Sistema profesional alemán de monitoreo continuo de temperatura y humedad orientado a industria alimentaria, farmacéutica, laboratorios y cadena de frío. Combina sondas radio/Ethernet, una base de datos central y software de trazabilidad (incluida la variante validable para entornos regulados). Se comercializa en Perú mediante distribuidores autorizados, con servicios de instalación, calibración certificada y mantenimiento. Es el referente de precisión y cumplimiento normativo del sector, y por lo tanto el competidor que define el techo de expectativas de los Encargados de Control de Calidad.
-
-**Competidores indirectos.** Además de los anteriores, el equipo identificó cuatro alternativas que resuelven parcialmente la misma necesidad y que, en la práctica, son las que la PyME evalúa primero:
-
-- **Dataloggers autónomos** (Elitech, Novus, Kusitest y equivalentes comercializados en Lima): registran temperatura y humedad de forma continua a bajo costo, pero exigen descarga manual del archivo, no notifican en tiempo real y no exponen los datos a otros sistemas.
-- **Integradores locales de facility management y BMS** (Tgestiona, Integrity Perú, LAIN Holdings y similares): entregan proyectos a medida con levantamiento técnico e integración al BMS del cliente; son solventes técnicamente, pero manejan un ticket elevado y ciclos de venta largos que expulsan a la pequeña empresa.
-- **Sistemas SCADA industriales** (Siemens, Schneider EcoStruxure y equivalentes): el sustituto de alta gama que cubre el problema por completo, pero cuya inversión inicial y costo de mantenimiento están fuera del alcance del segmento objetivo, tal como se sustentó en la sección 1.2.1.
-- **La "no solución": rondas manuales.** El termohigrómetro portátil combinado con una planilla en papel u hoja de cálculo sigue siendo la alternativa dominante en el segmento. Es gratuita en apariencia, está profundamente arraigada en el procedimiento operativo y, por lo tanto, constituye el competidor real contra el que MachineGuard debe demostrar valor.
+**Testo Saveris ** Sistema profesional alemán de monitoreo continuo de temperatura y humedad orientado a industria alimentaria, farmacéutica, laboratorios y cadena de frío. Combina sondas radio/Ethernet, una base de datos central y software de trazabilidad. Se comercializa en Perú mediante distribuidores autorizados, con servicios de instalación, calibración certificada y mantenimiento.
 
 ---
 
 ### 2.1.1. Análisis competitivo
 
-A continuación se presenta el Competitive Analysis Landscape elaborado por el equipo. El ejercicio permitió contrastar la idea inicial que se tenía de la competencia —"no existe una oferta accesible para la PyME"— con la realidad del mercado: sí existen soluciones de bajo costo, pero ninguna resuelve simultáneamente el precio de entrada, la continuidad de la medición ante caídas de conexión y la integración con el ERP que el cliente ya opera.
+A continuación se presenta el análisis competitivo elaborado por el equipo:
 
-**¿Por qué llevar a cabo este análisis?** Determinar con evidencia si las soluciones de monitoreo ambiental ya disponibles para una PyME peruana cubren las tres condiciones que MachineGuard considera críticas —costo de entrada por punto de monitoreo, continuidad de la medición ante pérdida de conectividad e integración con el ERP existente del cliente— con el fin de identificar el espacio real de diferenciación y ajustar la propuesta de valor antes de comprometer el desarrollo.
+**¿Por qué llevar a cabo este análisis?** Determinar con evidencia si las soluciones de monitoreo ambiental en Perú, cubren las tres condiciones que consideramos críticas —costo de entrada por punto de monitoreo, continuidad de la medición ante pérdida de conectividad e integración con el ERP existente del cliente— con el fin de identificar el espacio real de diferenciación y ajustar la propuesta de valor antes de comprometer el desarrollo.
 
 | Categoría | Aspecto | MachineGuard | UbiBot | Monnit (iMonnit) | Testo Saveris |
 |---|---|---|---|---|---|
