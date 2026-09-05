@@ -4,11 +4,11 @@
 
 Se identificaron tres competidores directos cuyo modelo de negocio se sustenta en productos digitales equivalentes además de resultar accesibles, ya sea por venta directa en línea o a través de distribuidores locales.
 
-**UbiBot.** Marca de UbiBot Ltd. especializada en sensores inalámbricos autónomos de temperatura, humedad, luz y vibración con conectividad WiFi, 4G. Los dispositivos se vinculan a la plataforma en la nube UbiBot IoT Platform, que ofrece dashboard web, aplicación móvil iOS/Android, alertas por correo, app y generación de reportes en PDF.
+**UbiBot.** :Marca de UbiBot Ltd. especializada en sensores inalámbricos autónomos de temperatura, humedad, luz y vibración con conectividad WiFi, 4G. Los dispositivos se vinculan a la plataforma en la nube UbiBot IoT Platform, que ofrece dashboard web, aplicación móvil iOS/Android, alertas por correo, app y generación de reportes en PDF.
 
-**Monnit (iMonnit).** Fabricante estadounidense que ofrece sensores de temperatura y humedad con certificado de calibración, notificaciones por SMS/correo/llamada y una API para integración. Representa la alternativa de gama profesional accesible.
+**Monnit (iMonnit).** :Fabricante estadounidense que ofrece sensores de temperatura y humedad con certificado de calibración, notificaciones por SMS/correo/llamada y una API para integración. Representa la alternativa de gama profesional accesible.
 
-**Testo Saveris ** Sistema profesional alemán de monitoreo continuo de temperatura y humedad orientado a industria alimentaria, farmacéutica, laboratorios y cadena de frío. Combina sondas radio/Ethernet, una base de datos central y software de trazabilidad. Se comercializa en Perú mediante distribuidores autorizados, con servicios de instalación, calibración certificada y mantenimiento.
+**Testo Saveris.** :Sistema profesional alemán de monitoreo continuo de temperatura y humedad orientado a industria alimentaria, farmacéutica, laboratorios y cadena de frío. Combina sondas radio/Ethernet, una base de datos central y software de trazabilidad. Se comercializa en Perú mediante distribuidores autorizados, con servicios de instalación, calibración certificada y mantenimiento.
 
 ---
 
@@ -16,7 +16,7 @@ Se identificaron tres competidores directos cuyo modelo de negocio se sustenta e
 
 A continuación se presenta el análisis competitivo elaborado por el equipo:
 
-**¿Por qué llevar a cabo este análisis?** Determinar con evidencia si las soluciones de monitoreo ambiental en Perú, cubren las tres condiciones que consideramos críticas —costo de entrada por punto de monitoreo, continuidad de la medición ante pérdida de conectividad e integración con el ERP existente del cliente— con el fin de identificar el espacio real de diferenciación y ajustar la propuesta de valor antes de comprometer el desarrollo.
+**¿Por qué llevar a cabo este análisis?** Determinar con evidencia si las soluciones de monitoreo ambiental en Perú, cubren las tres condiciones que consideramos críticas con el fin de identificar el espacio real de diferenciación y ajustar la propuesta de valor antes de comprometer el desarrollo.
 
 | Categoría | Aspecto | MachineGuard | UbiBot | Monnit (iMonnit) | Testo Saveris |
 |---|---|---|---|---|---|
