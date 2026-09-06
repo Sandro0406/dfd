@@ -131,13 +131,11 @@ Se elaboró una ficha de User Persona por cada segmento objetivo:
 
 #### User Persona 1 — Segmento: Jefes de Almacén y Gerentes de Operaciones
 
-> **[ INSERTAR IMAGEN ]** — Ficha de User Persona "Esteban García" elaborada en UXPressia
-> `![User Persona Esteban García](../assets/img/chapter-2/personas/esteban-garcia.png)`
+![User Persona Esteban García](assets/img/chapter-2/personas/esteban-garcia.png)
 
 #### User Persona 2 — Segmento: Encargados de Control de Calidad
 
-> **[ INSERTAR IMAGEN ]** — Ficha de User Persona "Micaela Suárez" elaborada en UXPressia
-> `![User Persona Micaela Suárez](../assets/img/chapter-2/personas/micaela-suarez.png)`
+![User Persona Micaela Suárez](assets/img/chapter-2/personas/micaela-suarez.png)
 
 ---
 
@@ -163,15 +161,13 @@ Se elaboró una ficha de User Persona por cada segmento objetivo:
 
 #### User Persona 1 — Segmento: Jefes de Almacén y Gerentes de Operaciones
 
-> **[ INSERTAR IMAGEN ]** — User Journey Map As-Is de Esteban García elaborado en UXPressia
-> `![Journey Map Esteban García](../assets/img/chapter-2/journeys/esteban-garcia-as-is.png)`
+<img src="assets/img/chapter-2/journeys/esteban-garcia-as-is.png" alt="Journey Map Esteban García" width="900"/>
 
 *Tabla 4. User Journey Map As-Is de Esteban García (Jefe de Almacén).*
 
 #### User Persona 2 — Segmento: Encargados de Control de Calidad
 
-> **[ INSERTAR IMAGEN ]** — User Journey Map As-Is de Micaela Suárez elaborado en UXPressia
-> `![Journey Map Micaela Suárez](../assets/img/chapter-2/journeys/micaela-suarez-as-is.png)`
+<img src="assets/img/chapter-2/journeys/micaela-suarez-as-is.png" alt="Journey Map Micaela Suárez" width="900"/>
 
 *Tabla 5. User Journey Map As-Is de Micaela Suárez (Encargada de Control de Calidad).*
 
@@ -181,15 +177,13 @@ Se elaboró una ficha de User Persona por cada segmento objetivo:
 
 #### User Persona 1 — Segmento: Jefes de Almacén y Gerentes de Operaciones
 
-> **[ INSERTAR IMAGEN ]** — Empathy Map de Esteban García elaborado en UXPressia
-> `![Empathy Map Esteban García](../assets/img/chapter-2/empathy/esteban-garcia.png)`
+![Empathy Map Esteban García](assets/img/chapter-2/empathy/esteban-garcia.png)
 
 *Tabla 6. Empathy Map del User Persona Esteban García.*
 
 #### User Persona 2 — Segmento: Encargados de Control de Calidad
 
-> **[ INSERTAR IMAGEN ]** — Empathy Map de Micaela Suárez elaborado en UXPressia
-> `![Empathy Map Micaela Suárez](../assets/img/chapter-2/empathy/micaela-suarez.png)`
+![Empathy Map Micaela Suárez](assets/img/chapter-2/empathy/micaela-suarez.png)
 
 *Tabla 7. Empathy Map del User Persona Micaela Suárez.*
 
@@ -252,8 +246,7 @@ La sesión se realizó de forma remota sobre un lienzo compartido, con la partic
 8. **Reverse Storytelling (narración inversa).** Se recorrió la línea de tiempo en sentido contrario, de derecha a izquierda, preguntando ante cada evento "¿qué pudo haber disparado este evento?". El ejercicio reveló dos eventos que nadie había escrito porque son eventos de ausencia y no de acción —"Nodo Reportado Sin Conexión" y "Conexión con la Nube Restablecida"—, ambos críticos para la continuidad del servicio.
 9. **Closing (cierre).** Se consolidaron las notas rosadas en la agenda de decisiones pendientes, se recogieron las oportunidades de negocio detectadas durante la narración y se acordaron los términos del dominio que pasarían a formar parte del Ubiquitous Language de la sección 2.5.
 
-> **[ INSERTAR IMAGEN ]** — Captura del lienzo completo del Big Picture EventStorming
-> `![Big Picture EventStorming](../assets/img/chapter-2/eventstorming/lienzo-completo.png)`
+![Big Picture EventStorming](assets/img/chapter-2/eventstorming/lienzo-completo.png)
 
 *Figura 1. Lienzo consolidado del Big Picture EventStorming de MachineGuard.*
 
