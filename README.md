@@ -100,7 +100,6 @@ A continuación se presenta el análisis competitivo elaborado por el equipo:
 - **Duración:**
 - **Resumen:**
 
-> **[ INSERTAR IMAGEN ]** — Screenshot de un cuadro del video de la entrevista
 
 #### Segmento 2: Encargados de Control de Calidad
 
@@ -111,7 +110,6 @@ A continuación se presenta el análisis competitivo elaborado por el equipo:
 - **Duración:**
 - **Resumen:**
 
-> **[ INSERTAR IMAGEN ]** — Screenshot de un cuadro del video de la entrevista
 
 ---
 
