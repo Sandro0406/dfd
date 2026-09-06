@@ -215,78 +215,11 @@ Se elaboró una ficha de User Persona por cada segmento objetivo:
 
 ## 2.4. Big Picture EventStorming
 
-El equipo llevó a cabo una sesión colaborativa de Big Picture EventStorming con el objetivo de construir una primera comprensión compartida del dominio de negocio de MachineGuard. A diferencia de los artefactos anteriores, centrados en el usuario, este ejercicio se enfoca en el landscape del negocio: qué sucede a lo largo del tiempo, quién lo provoca, qué sistemas externos participan y en qué puntos existen dudas, tensiones u oportunidades que el equipo aún no ha resuelto.
-
-La sesión se condujo siguiendo el Step-by-Step Guide to Run Your Big Picture EventStorming referenciado en el enunciado del curso, respetando sus nueve fases y su convención de colores.
-
-### Convención de notas utilizada
-
-| Nota | Significado en la sesión |
-|---|---|
-| **Naranja** | Domain Event: algo relevante que ya ocurrió en el dominio. Se redacta siempre en tiempo pasado ("Umbral Excedido", "Alerta Reconocida"). Es el elemento primario del taller. |
-| **Amarilla (pequeña)** | Actor: persona con un rol dentro del dominio que provoca o consume el evento. Se coloca al inicio de la cadena de eventos que desencadena. |
-| **Azul** | Sistema externo: API o servicio de terceros ajeno al dominio con el que este interactúa. Se alinea con el punto exacto de interacción. |
-| **Rosada** | Problema o hot spot: duda, tensión, riesgo o decisión pendiente que emerge durante el taller y que el equipo no logra resolver en el momento. |
-
-*Tabla 10. Convención de notas utilizada en la sesión de Big Picture EventStorming.*
-
-**Dos elementos adicionales.** Los eventos pivotales no reciben un color propio: se señalan trazando un divisor vertical sobre la línea de tiempo, que delimita las fases del dominio. Las oportunidades de negocio detectadas durante la narración tampoco se registran con nota de color; se recogen durante el cierre de la sesión y se listan al final de esta sección.
-
-### Desarrollo de la sesión
-
-La sesión se realizó de forma remota sobre un lienzo compartido, con la participación de los siete integrantes del equipo y una duración aproximada de dos horas. El desarrollo siguió las nueve fases del método:
-
-1. **Preparing the Room (preparación del espacio).** El facilitador acondicionó el tablero media hora antes de la convocatoria: reservó un lienzo horizontal amplio y sin límites predefinidos, para no condicionar el largo de la línea de tiempo, y fijó a la vista la agenda visual del taller y la leyenda de colores.
-2. **Energizing the Audience (activación del equipo).** Se abrió con una dinámica breve de calentamiento para que los participantes perdieran el reparo a escribir en el tablero. Se estableció de forma explícita la regla de que no existen notas incorrectas y que nadie corrige la nota de otro durante la generación.
-3. **Briefing and Presenting the Plan (briefing y presentación del plan).** El facilitador explicó qué es un domain event y por qué se redacta en pasado, mostró la agenda visual con las fases del taller y delimitó el alcance del dominio a explorar: el monitoreo ambiental de zonas de almacenamiento y producción, desde que un cliente contrata el servicio hasta que lo renueva o lo cancela.
-4. **Generating Domain Events (generación de eventos de dominio).** El facilitador colocó primero un evento preparado de antemano —"Umbral Excedido"— para romper el hielo y fijar el formato esperado. Durante unos veinticinco minutos cada integrante escribió en paralelo, sin coordinarse con los demás, todos los eventos que reconocía en el negocio. Se obtuvieron más de setenta notas naranjas con abundante duplicación.
-5. **Sorting Domain Events (ordenamiento de los eventos).** El equipo ordenó las notas de izquierda a derecha siguiendo el paso del tiempo, fusionó los duplicados, corrigió las redacciones que no estaban en pasado y descartó aquellas que resultaron ser acciones o intenciones en lugar de hechos consumados. Para los flujos concurrentes —la captura en el borde ocurre en paralelo a la operación del almacén— se emplearon swimlanes.
-6. **Adding Actors and External Systems (actores y sistemas externos).** Con la línea de tiempo ya ordenada se incorporaron las notas amarillas de actores al inicio de cada cadena de eventos, y las notas azules de sistemas externos alineadas con sus puntos de interacción. Aquí surgió la primera discusión relevante del taller: no hubo acuerdo sobre quién es el actor del evento "Umbrales de la Zona Configurados", lo que quedó registrado como hot spot.
-7. **Storytelling (narración).** Varios voluntarios narraron la historia del dominio de principio a fin, por tramos, en voz alta. Cada vez que la narración se trababa o generaba desacuerdo se colocó una nota rosada de problema en ese punto. Durante este recorrido se trazaron además los divisores verticales sobre los eventos pivotales, que dejaron la línea de tiempo dividida en seis fases.
-8. **Reverse Storytelling (narración inversa).** Se recorrió la línea de tiempo en sentido contrario, de derecha a izquierda, preguntando ante cada evento "¿qué pudo haber disparado este evento?". El ejercicio reveló dos eventos que nadie había escrito porque son eventos de ausencia y no de acción —"Nodo Reportado Sin Conexión" y "Conexión con la Nube Restablecida"—, ambos críticos para la continuidad del servicio.
-9. **Closing (cierre).** Se consolidaron las notas rosadas en la agenda de decisiones pendientes, se recogieron las oportunidades de negocio detectadas durante la narración y se acordaron los términos del dominio que pasarían a formar parte del Ubiquitous Language de la sección 2.5.
 
 ![Big Picture EventStorming](assets/img/chapter-2/eventstorming/lienzo-completo.png)
 
 *Figura 1. Lienzo consolidado del Big Picture EventStorming de MachineGuard.*
 
-### Línea de tiempo del dominio
-
-| Fase | Domain Events (en pasado) | Actores | Sistemas externos |
-|---|---|---|---|
-| **Fase 1**<br>Provisión y despliegue | Cliente Registrado<br>Plan de Suscripción Contratado<br>Instalación Registrada<br>Zona de Monitoreo Creada<br>Umbrales de la Zona Configurados<br>**Nodo Sensor Vinculado a la Zona** *(pivotal event)*<br>Nodo Sensor Activado | Gerente de Operaciones<br>Jefe de Almacén<br>Encargado de Control de Calidad<br>Equipo comercial de MachineGuard | Pasarela de pagos<br>Servicio de correo transaccional |
-| **Fase 2**<br>Captura y procesamiento en el borde | Lectura Capturada<br>Lectura Calibrada<br>Lectura Descartada por Anomalía<br>Lote de Lecturas Almacenado Localmente<br>Nodo Reportado Sin Conexión<br>Conexión con la Nube Restablecida<br>**Lote de Lecturas Sincronizado** *(pivotal event)* | Nodo sensor (dispositivo)<br>Servicio de borde | Red del cliente / proveedor de internet |
-| **Fase 3**<br>Evaluación y alerta | Medición Registrada<br>Umbral Excedido<br>**Alerta Generada** *(pivotal event)*<br>Notificación Enviada<br>Notificación Entregada<br>Alerta Reconocida<br>Alerta Escalada por Falta de Respuesta | Jefe de Almacén<br>Gerente de Operaciones<br>Encargado de Control de Calidad | Servicio de notificaciones push<br>Servicio de mensajería / SMS<br>Servicio de correo<br>Servicio meteorológico externo |
-| **Fase 4**<br>Respuesta operativa | Acción Correctiva Registrada<br>Condición Ambiental Normalizada<br>**Alerta Cerrada** *(pivotal event)*<br>Incidente Documentado<br>Producto No Conforme Identificado<br>Merma Registrada | Jefe de Almacén<br>Operario de almacén<br>Encargado de Control de Calidad | ERP del cliente |
-| **Fase 5**<br>Trazabilidad y cumplimiento | Historial de Mediciones Consultado<br>**Reporte de Trazabilidad Generado** *(pivotal event)*<br>Reporte Exportado<br>Datos Consumidos por el ERP del Cliente<br>Evidencia Presentada en Auditoría<br>No Conformidad Levantada | Encargado de Control de Calidad<br>Auditor externo<br>Cliente de la empresa | ERP del cliente<br>Sistema documental del auditor |
-| **Fase 6**<br>Continuidad del servicio | Batería Baja Detectada<br>Calibración del Nodo Vencida<br>Nodo Recalibrado<br>Nodo Reemplazado<br>**Suscripción Renovada** *(pivotal event)*<br>Suscripción Cancelada | Jefe de Almacén<br>Soporte de MachineGuard<br>Gerente de Operaciones | Pasarela de pagos<br>Servicio de correo transaccional |
-
-*Tabla 11. Línea de tiempo del Big Picture EventStorming de MachineGuard.*
-
-### Problemas y hot spots identificados
-
-| N.° | Problema / hot spot (nota rosada) | Por qué importa |
-|:---:|---|---|
-| 1 | ¿Quién está autorizado a modificar los umbrales de una zona: el jefe de almacén o solo el encargado de calidad? | Fue la primera discusión del taller, al no poder asignar un actor único al evento "Umbrales de la Zona Configurados". Determina el modelo de roles y permisos, y afecta el valor probatorio del registro ante una auditoría. |
-| 2 | ¿Cuánto tiempo puede operar el servicio de borde sin conexión antes de que se considere pérdida de datos? | Define la capacidad de almacenamiento local exigida al Edge Service y el compromiso de continuidad que se puede prometer comercialmente. |
-| 3 | ¿Un nodo sin conexión debe generar una alerta propia y de qué severidad? | Surgió durante la narración inversa. Un sensor silencioso puede ser más peligroso que uno que reporta valores fuera de rango, porque genera una falsa sensación de normalidad. |
-| 4 | Si una condición se normaliza sola, ¿la alerta se cierra automáticamente o requiere reconocimiento humano? | Impacta directamente en la trazabilidad: un cierre automático simplifica la operación, pero elimina la evidencia de que alguien tomó conocimiento del evento. |
-| 5 | ¿Cuántos reintentos de notificación se realizan y tras cuánto tiempo sin reconocimiento se escala la alerta? | Define la política de escalamiento y evita tanto la desatención de un evento crítico como la saturación del usuario. |
-| 6 | ¿Cómo se distingue una desviación real de una lectura anómala producida por un sensor descalibrado o defectuoso? | Es el mayor riesgo del producto: las falsas alarmas erosionan la confianza más rápido que cualquier otra falla. |
-| 7 | ¿Qué ocurre con el historial cuando el cliente cancela su suscripción? | Involucra una decisión de negocio, una expectativa del usuario y una obligación de protección de datos. |
-| 8 | ¿Qué peso probatorio tiene el historial ante un auditor si el nodo no cuenta con calibración certificada? | Delimita hasta dónde puede llegar la promesa comercial dirigida al segmento de control de calidad. |
-| 9 | ¿Debe el sistema registrar la acción correctiva aplicada o basta con dejar constancia de la normalización? | Condiciona el alcance del bounded context de incidentes y la profundidad del reporte de trazabilidad. |
-| 10 | ¿La información meteorológica externa se usa solo como contexto o llega a alimentar alertas predictivas? | Define el rol del servicio de terceros dentro del dominio y el alcance de una futura funcionalidad predictiva. |
-
-*Tabla 12. Problemas y hot spots registrados durante la sesión de Big Picture EventStorming.*
-
-### Oportunidades detectadas en el cierre
-
-- El evento Merma Registrada permite calcular de forma automática el retorno de la inversión del cliente, lo que convierte al propio producto en su mejor argumento de renovación.
-- El evento Calibración del Nodo Vencida abre la puerta a un servicio recurrente de verificación y recalibración, con ingresos adicionales a la suscripción.
-- El evento Datos Consumidos por el ERP del Cliente sugiere un modelo de alianza con proveedores de ERP locales, en el que MachineGuard opera como módulo complementario.
-- La acumulación de mediciones por sector y por zona geográfica habilita, a mediano plazo, la generación de valores de referencia comparativos entre empresas del mismo rubro.
-- El evento Evidencia Presentada en Auditoría revela la posibilidad de ofrecer plantillas de reporte preconfiguradas según el estándar de inocuidad que aplique a cada cliente.
 
 ---
 
